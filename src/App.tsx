@@ -1,8 +1,11 @@
+import AppRouter from "./router/AppRouter";
+import { Reset } from "styled-reset";
 function App() {
   return (
-    <div>
-      <h1>hello !</h1>
-    </div>
+    <>
+      <Reset />
+      <AppRouter />
+    </>
   );
 }
 
