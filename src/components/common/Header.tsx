@@ -5,7 +5,6 @@ import { useRecoilState } from "recoil";
 import { atomTest } from "../../recoil/atom";
 const Header = () => {
   const [test, setTest] = useRecoilState(atomTest);
-  console.log(test.test);
 
   return (
     <>
