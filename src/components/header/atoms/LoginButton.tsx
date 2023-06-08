@@ -1,7 +1,11 @@
-import React from "react";
+import { LoginButtonWrapper } from "../../../styles/headerStyled/HeaderStyled";
 
 const LoginButton = () => {
-  return <div>LoginButton</div>;
+  return (
+    <LoginButtonWrapper>
+      <button>로그인</button>
+    </LoginButtonWrapper>
+  );
 };
 
 export default LoginButton;

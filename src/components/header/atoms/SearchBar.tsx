@@ -1,7 +1,12 @@
-import React from "react";
+import { BsSearch } from "react-icons/bs";
+import { SearchBarWrapper } from "../../../styles/headerStyled/HeaderStyled";
 
 const SearchBar = () => {
-  return <div>SearchBar</div>;
+  return (
+    <SearchBarWrapper>
+      <BsSearch></BsSearch>
+    </SearchBarWrapper>
+  );
 };
 
 export default SearchBar;
