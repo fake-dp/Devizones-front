@@ -1,11 +1,20 @@
+import { ThemeProvider } from "styled-components";
 import AppRouter from "./router/AppRouter";
-import { Reset } from "styled-reset";
+import GlobalStyle from "./styles/globalStyeld/globalStyled";
+import { useRecoilState } from 'recoil';
+import { themeState } from "./recoil/themeState";
+import { lightTheme, darkTheme } from "./styles/globalStyeld/theme";
+
 function App() {
+
+  const [ theme ] = useRecoilState(themeState)
+  const appliedTheme = theme === 'light'? lightTheme: darkTheme;
+  
   return (
-    <>
-      <Reset />
+    <ThemeProvider theme ={appliedTheme}>
+      <GlobalStyle />
       <AppRouter />
-    </>
+    </ThemeProvider>
   );
 }
 

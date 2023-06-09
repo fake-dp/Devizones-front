@@ -3,6 +3,7 @@ import Logo from "../atoms/Logo";
 import SearchBar from "../atoms/SearchBar";
 import { Link } from "react-router-dom";
 import * as S from "../../../styles/headerStyled/HeaderStyled";
+import ToggleTheme from "../atoms/ToggleTheme";
 
 type HeaderOrgProps = {
   openModal: () => void;
@@ -21,6 +22,7 @@ const HeaderOrg = ({ openModal }: HeaderOrgProps) => {
           {" "}
           <SearchBar />
         </Link>
+        <ToggleTheme />
         <LoginButton openModal={openModal} />
       </S.HeaderRigth>
     </S.HeaderContainer>

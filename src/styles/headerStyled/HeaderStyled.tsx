@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 100px;
   height: 80px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -32,11 +32,11 @@ export const LoginButtonWrapper = styled.div`
     font-size: 1rem;
     border-radius: 1rem;
     outline: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     word-break: keep-all;
     background: #f8f9fa;
-    border: 1px solid #192a56;
-    color: #192a56;
+    border: 1px solid #333;
+    color: #333;
     transition: all 0.125s ease-in 0s;
     cursor: pointer;
     &:hover {
@@ -45,6 +45,11 @@ export const LoginButtonWrapper = styled.div`
     }
   }
 `;
+
+//헤더 Toggle Theme 아이콘
+export const ThemeIconWrapper = styled.div`
+  border: 1px solid ;
+`
 
 // 헤더 서치 아이콘 css
 export const SearchBarWrapper = styled.div`

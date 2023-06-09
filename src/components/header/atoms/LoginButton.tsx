@@ -7,7 +7,7 @@ type LoginButtonProps = {
 const LoginButton = ({ openModal }: LoginButtonProps) => {
   return (
     <LoginButtonWrapper>
-      <button onClick={openModal}>로그인</button>
+      <button onClick={openModal}>LOGIN</button>
     </LoginButtonWrapper>
   );
 };
