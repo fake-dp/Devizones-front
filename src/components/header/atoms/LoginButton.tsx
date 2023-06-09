@@ -1,9 +1,13 @@
 import { LoginButtonWrapper } from "../../../styles/headerStyled/HeaderStyled";
 
-const LoginButton = () => {
+type LoginButtonProps = {
+  openModal: () => void;
+};
+
+const LoginButton = ({ openModal }: LoginButtonProps) => {
   return (
     <LoginButtonWrapper>
-      <button>로그인</button>
+      <button onClick={openModal}>로그인</button>
     </LoginButtonWrapper>
   );
 };
