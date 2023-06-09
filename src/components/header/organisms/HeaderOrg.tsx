@@ -4,7 +4,11 @@ import SearchBar from "../atoms/SearchBar";
 import { Link } from "react-router-dom";
 import * as S from "../../../styles/headerStyled/HeaderStyled";
 
-const HeaderOrg = () => {
+type HeaderOrgProps = {
+  openModal: () => void;
+};
+
+const HeaderOrg = ({ openModal }: HeaderOrgProps) => {
   return (
     <S.HeaderContainer>
       <Link to="/">
@@ -17,7 +21,7 @@ const HeaderOrg = () => {
           {" "}
           <SearchBar />
         </Link>
-        <LoginButton />
+        <LoginButton openModal={openModal} />
       </S.HeaderRigth>
     </S.HeaderContainer>
   );
