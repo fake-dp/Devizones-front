@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
 
 // 헤더 레이아웃
 export const HeaderContainer = styled.div`
@@ -7,7 +8,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   padding: 0 100px;
   height: 80px;
-  background-color: #fff;
+  background-color: ${props => props.theme.background};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
@@ -35,7 +36,7 @@ export const LoginButtonWrapper = styled.div`
     /* font-weight: bold; */
     word-break: keep-all;
     background: #f8f9fa;
-    border: 1px solid #333;
+    border: 1px solid ${props => props.theme.border};
     color: #333;
     transition: all 0.125s ease-in 0s;
     cursor: pointer;
@@ -48,8 +49,40 @@ export const LoginButtonWrapper = styled.div`
 
 //헤더 Toggle Theme 아이콘
 export const ThemeIconWrapper = styled.div`
-  border: 1px solid ;
+  position: relative;
+  width: 8rem;
+  height: 2rem;
+  border: 1px solid ${props => props.theme.border};
+  border-radius: 1rem;
+  background: ${props => props.theme.background};
+  cursor: pointer;
 `
+
+const themeStyles = css`
+  position: absolute;
+  top: 0;
+  font-size: 1.3rem;
+  padding: 0.35rem;
+  background: ${props => props.theme.font};
+  border-radius: 1rem;
+  transition: all 2s ease-in;
+`
+
+export const StyledSun = styled(BsSunFill)`
+  ${themeStyles}
+  right: 0;
+  fill: #fff;
+`;
+
+export const StyledMoon = styled(BsMoonFill)`
+  ${themeStyles}
+  left: 0;
+  fill: #000;
+`;
+
+
+
+
 
 // 헤더 서치 아이콘 css
 export const SearchBarWrapper = styled.div`

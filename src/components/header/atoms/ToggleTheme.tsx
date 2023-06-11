@@ -1,6 +1,8 @@
 import { ThemeIconWrapper } from "../../../styles/headerStyled/HeaderStyled";
 import { useRecoilState } from 'recoil';
 import { themeState } from "../../../recoil/themeState";
+import { StyledSun, StyledMoon } from "../../../styles/headerStyled/HeaderStyled";
+
 const ToggleTheme = () => {
   const [theme, setTheme] = useRecoilState(themeState);
 
@@ -9,7 +11,7 @@ const ToggleTheme = () => {
   }
   return (
     <ThemeIconWrapper onClick={toggleTheme}>
-      '테마 스위칭'
+      {theme === 'light'?<StyledSun />:<StyledMoon />}
     </ThemeIconWrapper>
   )
 };
