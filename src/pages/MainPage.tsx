@@ -1,7 +1,11 @@
-import React from "react";
+import Banner from "../components/banner/templates/Banner";
 
 const MainPage = () => {
-  return <div>MainPage</div>;
+  return (
+    <>
+      <Banner />
+    </>
+  )
 };
 
 export default MainPage;

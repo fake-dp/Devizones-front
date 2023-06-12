@@ -25,11 +25,12 @@ const GlobalStyle = createGlobalStyle`
 
   html, body, button {
     font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+    background: ${props => props.theme.background};
   }
 
-  html, body {
-    background: ${props => props.theme.background};
-  }  
+  a {
+    text-decoration: none;
+  }
 `
 
 export default GlobalStyle
