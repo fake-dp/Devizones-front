@@ -5,7 +5,7 @@ import { useRecoilState } from 'recoil';
 import { themeState } from "./recoil/themeState";
 import { lightTheme, darkTheme } from "./styles/globalStyeld/theme";
 
-function App() {
+const App = () => {
 
   const [ theme ] = useRecoilState(themeState)
   const appliedTheme = theme === 'light'? lightTheme: darkTheme;

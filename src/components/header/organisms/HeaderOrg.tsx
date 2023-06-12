@@ -17,14 +17,14 @@ const HeaderOrg = ({ openModal }: HeaderOrgProps) => {
         <Logo />
       </Link>
 
-      <S.HeaderRigth>
+      <S.HeaderRight>
         <Link to="/search">
           {" "}
           <SearchBar />
         </Link>
         <ToggleTheme />
         <LoginButton openModal={openModal} />
-      </S.HeaderRigth>
+      </S.HeaderRight>
     </S.HeaderContainer>
   );
 };
