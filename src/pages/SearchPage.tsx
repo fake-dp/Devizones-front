@@ -1,7 +1,7 @@
-import React from "react";
+import SearchForm from "../components/searchpage/templates/SearchForm";
 
 const SearchPage = () => {
-  return <div>SearchPage</div>;
+  return <SearchForm />;
 };
 
 export default SearchPage;
