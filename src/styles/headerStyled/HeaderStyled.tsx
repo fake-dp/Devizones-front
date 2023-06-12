@@ -7,42 +7,38 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
-  height: 80px;
+  height: 70px;
   background-color: ${props => props.theme.background};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 `;
 
-export const HeaderRigth = styled.div`
+export const HeaderRight = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 // 헤더 로그인 버튼
 export const LoginButtonWrapper = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   > button {
     height: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 1rem;
     border-radius: 1rem;
     outline: none;
-    /* font-weight: bold; */
     word-break: keep-all;
-    background: #f8f9fa;
+    background: ${props => props.theme.background};
     border: 1px solid ${props => props.theme.border};
-    color: #333;
+    color: ${props => props.theme.font};
     transition: all 0.125s ease-in 0s;
     cursor: pointer;
     &:hover {
-      background: #192a56;
-      color: #f8f9fa;
+      background: ${props => props.theme.back_reverse};
+      color: ${props => props.theme.background};
     }
   }
 `;
@@ -50,7 +46,7 @@ export const LoginButtonWrapper = styled.div`
 //헤더 Toggle Theme 아이콘
 export const ThemeIconWrapper = styled.div`
   position: relative;
-  width: 8rem;
+  width: 5rem;
   height: 2rem;
   border: 1px solid ${props => props.theme.border};
   border-radius: 1rem;
@@ -80,10 +76,6 @@ export const StyledMoon = styled(BsMoonFill)`
   fill: #000;
 `;
 
-
-
-
-
 // 헤더 서치 아이콘 css
 export const SearchBarWrapper = styled.div`
   width: 100%;
@@ -92,14 +84,16 @@ export const SearchBarWrapper = styled.div`
   align-items: center;
   > svg {
     font-size: 1.3rem;
-    color: #192a56;
+    color: ${props => props.theme.border};
     padding: 0.5rem;
     transition: all 0.125s ease-in 0s;
     cursor: pointer;
+    border: 1px solid ${props => props.theme.border};
+    border-radius: 50%;
     &:hover {
       border-radius: 50%;
-      background-color: #192a56;
-      color: #f8f9fa;
+      background: ${props => props.theme.back_reverse};
+      color: ${props => props.theme.background};
     }
   }
 `;
