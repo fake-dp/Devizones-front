@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import AppRouter from "./router/AppRouter";
-import GlobalStyle from "./styles/globalStyeld/globalStyled";
+import GlobalStyle from "./styles/globalStyeld/GlobalStyled";
 import { useRecoilState } from 'recoil';
 import { themeState } from "./recoil/themeState";
 import { lightTheme, darkTheme } from "./styles/globalStyeld/theme";
