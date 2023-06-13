@@ -1,4 +1,4 @@
-import SearchForm from "../components/searchpage/templates/SearchForm";
+import SearchForm from "../components/searchPage/templates/SearchForm";
 
 const SearchPage = () => {
   return <SearchForm />;

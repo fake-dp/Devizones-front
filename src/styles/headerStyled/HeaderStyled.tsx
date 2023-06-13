@@ -6,10 +6,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 50px;
   height: 70px;
+  @media (min-width: 768px) {
+    padding: 0 100px;
+  }
   background-color: ${props => props.theme.background};
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 `;
 
 export const HeaderRight = styled.div`
@@ -46,7 +48,7 @@ export const LoginButtonWrapper = styled.div`
 //헤더 Toggle Theme 아이콘
 export const ThemeIconWrapper = styled.div`
   position: relative;
-  width: 5rem;
+  width: 4rem;
   height: 2rem;
   border: 1px solid ${props => props.theme.border};
   border-radius: 1rem;

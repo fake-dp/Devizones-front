@@ -28,9 +28,9 @@ const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme.background};
   }
 
-  html, body {
-    background: ${(props) => props.theme.background};
-  }  
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyle;
